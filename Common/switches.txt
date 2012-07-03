@@ -1,0 +1,7 @@
+#### Common Switches
+
+PUBLISH_PERFORMANCE_COUNTERS (default OFF)
+	¬ключает в сборку поддержку счетчиков производительности.
+
+TRACE (default ON)
+

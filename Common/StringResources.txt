@@ -1,0 +1,50 @@
+# LocalizedException
+EUnknownError=An error has been occurred while operation was active
+
+# Log class resources
+DefSwitchDesc=Default Trace Messages.
+LogNestedException=Nested Exception Information:
+
+ErrServiceExists=This container already contains service {0}.
+ErrInvalidServiceInstance=Invalid service instance for type: {0}.
+ErrTimeout=Timeout has expired.
+ErrSomeServiceNotFound=Requested service not found.
+ErrInvalidEnvironment=Invalid environment configuration.
+ErrServiceNotFound=Service not found. Service Type: {0}.
+ErrUnsupportedDate=Microsoft SQL Server does not support date values below January 1, 1753.
+ErrUnsupportedMoney=Microsoft SQL Server does support monetary data values from (- 922,337,203,685,477.5808) through (922,337,203,685,477.5807), with accuracy to a ten-thousandth of a monetary unit.
+
+# Cache Log Messages
+LogCacheCreated=ILS.Cache instance created:\n\tName={0}\n\tCleanPeriod={1}\n\tMaxEntries={2}
+LogCacheOptimize=Cache [{0}]: Scavenging started. 
+LogCacheOptimized=Cache [{0}]: Scavenging finished.
+LogCacheAdded=Cache [{0}].ADD: {1} = {2}.
+LogCacheRemove=Cache [{0}].REMOVE: {1}.
+LogCacheMaxExceed=Cache [{0}]: Max entry exceeded.
+LogCacheClear=Cache [{0}]: Clear Cache.
+
+# Threading
+NegativeSemaphoreCount=Semaphore must have a count of at least 0.
+SemaphoreAcquired=Semaphore has been acquired. Count = {0}.
+SemaphoreReleased=Semaphore has been released. Count = {0}.
+###############################################################################
+# $Log: StringResources.txt,v $
+# Revision 1.8  2005/10/27 13:58:54  shvydky
+# *** empty log message ***
+#
+# Revision 1.7  2005/10/25 12:23:40  shvydky
+# *** empty log message ***
+#
+# Revision 1.6  2005/07/12 10:39:39  shvydky
+# *** empty log message ***
+#
+# Revision 1.5  2005/07/08 15:29:12  shvydky
+# *** empty log message ***
+#
+# Revision 1.4  2005/05/06 14:44:32  shvydky
+# *** empty log message ***
+#
+# Revision 1.3  2005/04/14 07:09:30  shvydky
+# Добавил логи во все *.cs файлы.
+#
+###############################################################################

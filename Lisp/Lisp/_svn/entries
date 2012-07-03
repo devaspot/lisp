@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11019"
+   name=""
+   committed-date="2008-08-13T19:57:10.312500Z"
+   url="svn://server/.Front/Branches/Front-0.0.1.8828/SDK/Lisp/Lisp"
+   last-author="nedash"
+   kind="dir"
+   uuid="ef69ca4b-107a-3343-bab4-946aa044714f"
+   repos="svn://server"
+   revision="11169"/>
+<entry
+   committed-rev="11190"
+   name="boot.lisp"
+   text-time="2008-08-25T14:58:47.464346Z"
+   committed-date="2008-08-26T07:12:55.437500Z"
+   checksum="cd7a3fbf9043003a9774d0dcc54580a4"
+   last-author="pilya"
+   kind="file"
+   prop-time="2008-08-15T11:15:53.217609Z"
+   revision="11190"/>
+<entry
+   committed-rev="11190"
+   name="flos.lisp"
+   text-time="2008-08-25T11:14:22.619602Z"
+   committed-date="2008-08-26T07:12:55.437500Z"
+   checksum="4b19a6410ddfb8438cba312c4fc00713"
+   last-author="pilya"
+   kind="file"
+   prop-time="2008-08-15T11:15:53.217609Z"
+   revision="11190"/>
+</wc-entries>

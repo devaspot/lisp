@@ -1,0 +1,125 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5453D00D-8833-4726-9ED2-A03075FDE002}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Front</RootNamespace>
+    <AssemblyName>Front.Common</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACL.cs" />
+    <Compile Include="AliasList.cs">
+      <DependentUpon>Name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AssemblyVersionInfo.cs" />
+    <Compile Include="AssemblyResolver.cs" />
+    <Compile Include="Cache.cs" />
+    <Compile Include="Clone.cs" />
+    <Compile Include="Collections.cs" />
+    <Compile Include="CollectionWrapper.cs">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context.cs" />
+    <Compile Include="ContextSwitch.cs" />
+    <Compile Include="Convert.cs" />
+    <Compile Include="CSVTools.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="DisposableBase.cs" />
+    <Compile Include="Environment.cs" />
+    <Compile Include="Error.cs" />
+    <Compile Include="FastMethodCall.cs" />
+    <Compile Include="FileUtils.cs" />
+    <Compile Include="GenericFunction.cs" />
+    <Compile Include="Globalization.cs" />
+    <Compile Include="Initialization.cs" />
+    <Compile Include="IO.cs" />
+    <Compile Include="ListWrapper.cs" />
+    <Compile Include="LocalizableException.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Name.cs" />
+    <Compile Include="NamedAttribute.cs" />
+    <Compile Include="NamedTypeDispatcher.cs" />
+    <Compile Include="NamedValueCollection.cs">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NamespaceDocs.cs" />
+    <Compile Include="PrefixListener.cs" />
+    <Compile Include="Processing\Command.cs" />
+    <Compile Include="Processing\CommandManager.cs" />
+    <Compile Include="Processing\Event.cs" />
+    <Compile Include="Processing\EventArgs.cs" />
+    <Compile Include="Processing\EventQueue.cs" />
+    <Compile Include="Processing\ProcessingQueue.cs" />
+    <Compile Include="ProgressIndicator.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="RotateListener.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceProvider.cs" />
+    <Compile Include="Checkpoint.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShellUtil.cs" />
+    <Compile Include="SpecialPath.cs" />
+    <Compile Include="StreamUtil.cs" />
+    <Compile Include="SysInterop\Printing\NativeMethods.cs" />
+    <Compile Include="SysInterop\Win32.cs" />
+    <Compile Include="Text.cs" />
+    <Compile Include="TypeDispatcher.cs" />
+    <Compile Include="TypeResolver.cs" />
+    <Compile Include="Wrapper.cs" />
+    <Compile Include="XmlWriterBase.cs" />
+    <Compile Include="GenericCollection.cs">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </Compile>
+    <None Include="ClassDiagrams\ClassDiagram2.cd" />
+    <None Include="ClassDiagrams\NVC.cd" />
+    <None Include="ClassDiagrams\Named_and_Wrappers.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StringResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)../rsg.cmd" "$(ProjectDir)StringResources.txt" "$(ProjectDir)Messages.resources"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

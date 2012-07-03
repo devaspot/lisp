@@ -1,0 +1,37 @@
+﻿# LocalizedException
+EUnknownError=Во время вызова произошла ошибка.
+
+# Log class resources
+DefSwitchDesc=Default Trace Messages.
+LogNestedException=Вложенное исключение:
+
+ErrServiceExists=Сервис {0} уже зарегистрирован в данном контейнере.
+ErrInvalidServiceInstance=Обнаружен некорректный экземпляр сервиса для типа: {0}.
+ErrTimeout=Время ожидания истекло.
+
+# Cache Log Messages
+LogCacheCreated=Создан экземпляр ILS.Cache:\n\tИмя={0}\n\tПериод очистки={1}\n\tМаксимальное количество элементов={2}
+LogCacheOptimize=Кеш [{0}]: Запущена очистка кеша. 
+LogCacheOptimized=Кеш [{0}]: Очистка кеша закончена.
+LogCacheAdded=Кеш [{0}].ADD: {1} = {2}.
+LogCacheRemove=Кеш [{0}].REMOVE: {1}.
+LogCacheMaxExceed=Кеш [{0}]: Достигнуто максимальное количество элементов.
+LogCacheClear=Кеш [{0}]: Кеш очищен.
+
+# Threading
+NegativeSemaphoreCount=Значение счетчика семафора не может быть меньше 0.
+SemaphoreAcquired=Семафор захвачен. Значение счетчика = {0}.
+SemaphoreReleased=Семафор освобожден. Значение счетчика = {0}.
+
+###############################################################################
+# $Log: StringResources.ru-RU.txt,v $
+# Revision 1.2  2005/05/06 14:44:32  shvydky
+# *** empty log message ***
+#
+# Revision 1.1  2005/04/18 08:17:28  shvydky
+# *** empty log message ***
+#
+# Revision 1.3  2005/04/14 07:09:30  shvydky
+# Добавил логи во все *.cs файлы.
+#
+###############################################################################

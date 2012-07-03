@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project name=".Front Lisp Engine" default="build">
+	<property name="basename" value="Front.Lisp" />
+	<property name="debug" value="true" unless="${property::exists('debug')}"/>
+
+	<property name="build.dir" value="${path::combine(project::get-base-directory(), 'build')}" unless="${property::exists('build.dir')}"/>
+	<property name="obj.dir" value="obj"/>
+	<property name="contribs.dir" value="${path::get-full-path(path::combine(project::get-base-directory(), '..\..\Contribs'))}" unless="${property::exists('contribs.dir')}" />
+
+	<target name="build" depends="libraries">
+		<mkdir dir="${build.dir}" />
+		<csc target="library" debug="${debug}" optimize="${not debug}" output="${build.dir}\${basename}.dll">
+			<sources>
+				<include name="*.cs" />
+				<include name="ObjectModel\*.cs" />
+				<include name="Utils\*.cs" />
+				<include name="Utils\Debug\*.cs" />
+			</sources>
+	
+			<references>
+				<lib>
+					<include name="${build.dir}" />
+				</lib>
+				<include name="Front.Common.dll" />
+			</references>
+		</csc>
+	</target>
+
+	<target name="libraries">
+		<nant target="build">
+			<buildfiles>
+				<include name="..\Common\default.build" />
+			</buildfiles>
+			<properties>
+				<property name="build.dir" value="${build.dir}" />
+				<property name="debug" value="${debug}" />
+				<property name="contribs.dir" value="${contribs.dir}" />
+			</properties>
+		</nant>
+	</target>
+</project>
+

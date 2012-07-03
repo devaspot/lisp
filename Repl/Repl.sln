@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repl", "Repl.csproj", "{9C30EAF4-A448-40DF-BB94-31165C12A109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common\Common.csproj", "{5453D00D-8833-4726-9ED2-A03075FDE002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lisp", "..\Lisp\Lisp.csproj", "{CA411BCB-272F-4417-9168-66DC4C1995BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C30EAF4-A448-40DF-BB94-31165C12A109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C30EAF4-A448-40DF-BB94-31165C12A109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C30EAF4-A448-40DF-BB94-31165C12A109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C30EAF4-A448-40DF-BB94-31165C12A109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5453D00D-8833-4726-9ED2-A03075FDE002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5453D00D-8833-4726-9ED2-A03075FDE002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5453D00D-8833-4726-9ED2-A03075FDE002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5453D00D-8833-4726-9ED2-A03075FDE002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA411BCB-272F-4417-9168-66DC4C1995BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA411BCB-272F-4417-9168-66DC4C1995BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA411BCB-272F-4417-9168-66DC4C1995BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA411BCB-272F-4417-9168-66DC4C1995BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<project name=".Front Common Library" default="build">
+	<property name="basename" value="Front.Common" />
+	<property name="debug" value="true" unless="${property::exists('debug')}"/>
+
+	<property name="build.dir" value="${path::combine(project::get-base-directory(), 'build')}" unless="${property::exists('build.dir')}"/>
+	<property name="obj.dir" value="obj"/>
+	<property name="contribs.dir" value="${path::get-full-path(path::combine(project::get-base-directory(), '..\..\Contribs'))}" unless="${property::exists('contribs.dir')}" />
+
+	<target name="build" depends="resources">
+		<mkdir dir="${build.dir}" />
+		<csc target="library" debug="${debug}" optimize="${not debug}" output="${build.dir}\${basename}.dll">
+			<sources>
+				<include name="*.cs" />
+				<include name="Processing\Event.cs" />
+				<include name="Processing\EventArgs.cs" />
+				<include name="Processing\EventQueue.cs" />
+				<include name="Processing\ProcessingQueue.cs" />
+				<include name="SysInterop\*.cs" />
+				<include name="SysInterop\Printing\*.cs" />
+			</sources>
+
+			<resources prefix="Front">
+				<include name="${obj.dir}\Messages.resources" />
+			</resources>
+		</csc>
+	</target>
+
+	<target name="resources">
+		<mkdir dir="${obj.dir}" />
+		<resgen input="StringResources.txt" output="${obj.dir}\Messages.resources" />
+	</target>
+</project>

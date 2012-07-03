@@ -1,0 +1,280 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA411BCB-272F-4417-9168-66DC4C1995BE}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Front.Lisp</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Front.Lisp</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>build\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>build\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BacktraceException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Closure.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLSConstructor.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLSEvent.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLSField.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLSLateBoundMember.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLSMember.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLSMethod.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLSProperty.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLSSymbols.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberAccessorBase.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MethodAccessor.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Namespace.cs" />
+    <Compile Include="ObjectModel\Attributes.cs">
+      <DependentUpon>MetaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\BehaviorDispatcher.cs">
+      <DependentUpon>Object.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\ClassDefinition.cs">
+      <DependentUpon>MetaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\Collection.cs">
+      <DependentUpon>Object.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\CollectionContainer.cs">
+      <DependentUpon>DataContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\CollectionContainerEnumerator.cs" />
+    <Compile Include="ObjectModel\Context.cs" />
+    <Compile Include="ObjectModel\DataContainer.cs" />
+    <Compile Include="ObjectModel\EventArgs.cs" />
+    <Compile Include="ObjectModel\Extender.cs">
+      <DependentUpon>MetaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\MetaInfo.cs" />
+    <Compile Include="ObjectModel\MetaInfoConfigurator.cs">
+      <DependentUpon>MetaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\MethodDefinition.cs">
+      <DependentUpon>MetaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\MethodExtracter.cs">
+      <DependentUpon>MetaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\Object.cs" />
+    <Compile Include="ObjectModel\ObjectBase.cs">
+      <DependentUpon>Object.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\ObjectBehavior.cs">
+      <DependentUpon>Object.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\ObjectFactory.cs" />
+    <Compile Include="ObjectModel\ObjectScope.cs">
+      <DependentUpon>DataContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\SchemeNode.cs">
+      <DependentUpon>MetaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\SimpleGenericFunction.cs" />
+    <Compile Include="ObjectModel\SlotDefinition.cs">
+      <DependentUpon>MetaInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectModel\ValueHandle.cs">
+      <DependentUpon>DataContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Package.cs" />
+    <Compile Include="PropertyAccessor.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Param.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FieldAccessor.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FnEnumerator.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cons.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constant.cs">
+      <DependentUpon>Expressions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicEnvironment.cs">
+      <DependentUpon>Expressions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environment.cs">
+      <DependentUpon>Expressions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expressions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Function.cs" />
+    <Compile Include="Interpreter.cs" />
+    <Compile Include="Keyword.cs">
+      <DependentUpon>Expressions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lisp.cs" />
+    <Compile Include="LispException.cs">
+      <DependentUpon>Expressions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalVariable.cs">
+      <DependentUpon>Expressions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Macro.cs">
+      <DependentUpon>Expressions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Primitives.cs">
+      <DependentUpon>Expressions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Record.cs">
+      <DependentUpon>Expressions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Symbol.cs">
+      <DependentUpon>Expressions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Debug\Debugger.cs" />
+    <Compile Include="Utils\Debug\ExceptionNode.cs" />
+    <Compile Include="Utils\Debug\ExeptionNodeHandler.cs" />
+    <Compile Include="Utils\Debug\LispInterop.cs" />
+    <Compile Include="Utils\Debug\NodeDescriptor.cs" />
+    <Compile Include="Utils\Debug\NodeHandler.cs" />
+    <Compile Include="Utils\Debug\NodeLook.cs" />
+    <Compile Include="Utils\Debug\NodesCollection.cs" />
+    <Compile Include="Utils\Util.cs" />
+    <None Include="Lisp\boot.lisp">
+    </None>
+    <None Include="Lisp\flos.lisp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{5453D00D-8833-4726-9ED2-A03075FDE002}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
